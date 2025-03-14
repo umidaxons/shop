@@ -1,0 +1,123 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+img {
+  display: flex;
+  object-fit: cover;
+}
+main {
+  flex-grow: 1;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.12px;
+  color: rgba(79, 79, 79, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+.container {
+  width: 100%;
+  max-width: 1260px;
+  padding: 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  margin: 0;
+}
+.title {
+  font-weight: 600;
+  color: black;
+
+  text-align: center;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 ta ustun */
+  grid-template-rows: auto auto; /* 2 ta qator */
+  gap: 10px;
+}
+.card {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #111;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  &:hover {
+    -webkit-box-shadow: 4px 25px 42px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 25px 42px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 25px 42px -1px rgba(0, 0, 0, 0.75);
+  }
+}
+.products-img {
+}
+.description {
+  color: black;
+  margin-bottom: 4px;
+}
+.rating {
+  margin-bottom: 4px;
+}
+.pracing {
+  color: #121212;
+  margin-bottom: 4px;
+}
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  &:hover {
+    opacity: 60%;
+  }
+  &:active {
+    opacity: 90%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
