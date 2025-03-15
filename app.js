@@ -19,7 +19,7 @@ function updateUI(products) {
     const productImg = clone.querySelector(".products-img");
     const description = clone.querySelector(".description");
     const rating = clone.querySelector(".rating");
-    const pricing = clone.querySelector(".pricing");
+    const pricing = clone.querySelector(".pracing");
 
     if (productImg) {
       productImg.src = p.thumbnail;
@@ -27,7 +27,8 @@ function updateUI(products) {
     }
 
     if (description) description.textContent = p.description;
-    if (rating) rating.textContent = `⭐${p.rating} reviews`;
+    if (rating)
+      rating.textContent = `⭐${p.rating} (${p.reviews.length}) reviews`;
     if (pricing) pricing.textContent = `$${p.price}`;
 
     list.appendChild(clone);
